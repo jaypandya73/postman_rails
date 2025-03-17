@@ -31,13 +31,14 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.add_dependency "activesupport", ">= 6.0.0"
   spec.add_dependency "httparty", "~> 0.21.0"
   spec.add_dependency "railties", ">= 6.0.0"
-  spec.add_dependency "activesupport", ">= 6.0.0"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "webmock", "~> 3.18"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
