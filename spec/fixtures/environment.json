@@ -1,0 +1,18 @@
+{
+  "environment": {
+    "id": "11111111-1111-1111-1111-111111111111",
+    "name": "Development",
+    "values": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:3000",
+        "enabled": true
+      },
+      {
+        "key": "api_key",
+        "value": "test_api_key",
+        "enabled": true
+      }
+    ]
+  }
+} 

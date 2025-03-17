@@ -1,0 +1,50 @@
+controller: users
+actions:
+  index:
+    method: GET
+    path: /api/v1/users
+    description: Retrieve a list of users
+    params:
+      - name: page
+        type: integer
+        description: Page number
+        required: false
+      - name: per_page
+        type: integer
+        description: Items per page
+        required: false
+        default: 10
+    responses:
+      - status: 200
+        content_type: application/json
+        description: List of users
+        example: |
+          {
+            "users": [
+              {
+                "id": 1,
+                "name": "John Doe",
+                "email": "john@example.com"
+              }
+            ]
+          }
+      - status: 400
+        content_type: application/json
+        description: Bad request
+  
+  show:
+    method: GET
+    path: /api/v1/users/:id
+    description: Retrieve a user by ID
+    params:
+      - name: id
+        type: integer
+        description: User ID
+        required: true
+    responses:
+      - status: 200
+        content_type: application/json
+        description: User details
+      - status: 404
+        content_type: application/json
+        description: User not found 

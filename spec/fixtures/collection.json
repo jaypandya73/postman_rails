@@ -1,0 +1,34 @@
+{
+  "collection": {
+    "info": {
+      "name": "Test Collection",
+      "description": "A test collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "users#index",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "/api/v1/users"
+          },
+          "description": "Retrieve a list of users"
+        },
+        "response": [
+          {
+            "name": "List of users",
+            "code": 200,
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\"users\":[{\"id\":1,\"name\":\"John Doe\",\"email\":\"john@example.com\"}]}"
+          }
+        ]
+      }
+    ]
+  }
+} 
